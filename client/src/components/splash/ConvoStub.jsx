@@ -87,17 +87,6 @@ class ConvoStub extends Component {
             <img className="convo-profile-small-img d-flex align-self-center mr-3" src={this.state.otherUserImageUrl} alt="Profile pic"/>
             <div className="media-body">
               <h5 className="mt-0 convo-stub-user-name">{this.state.otherUser.replace('_', ' ')}</h5>
-              <div style={{minWidth: 180}}>
-                <Rating
-                  empty="fa fa-star-o fa-2x"
-                  full="fa fa-star fa-2x"
-                  placeholder="fa fa-star fa-2x"
-                  fractions={2}
-                  onChange={this.changeRating}
-                  initialRate={this.averageRating(this.state.otherUserRating)}
-                  placeholderRate={this.averagedParsedRating}
-                />			
-              </div>
               <p className="convo-stub-user-location">{this.state.otherUserLocation}</p>
               <p className="mb-0 convo-stub-user-message">{messages[messages.length - 1].text}</p>
             </div>

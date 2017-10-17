@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize');
-const dbUrl = require('./elephantUrl.js');
-
+require('dotenv').config();
 //this initializes the database.
-const DB = new Sequelize(dbUrl, {
-  dialect: 'pg',
+const DB = new Sequelize(process.env.NAME, process.env.USERNAME, process.env.PASSWORD, {
+  host: process.env.HOST,
+  port: process.env.RDS_PORT,
+  dialect: 'postgres',
 });
 
 //This initializes and authenticates the database
@@ -84,11 +85,9 @@ Message.belongsTo(Conversation, { onDelete: 'cascade' });
 User.hasMany(Conversation, { onDelete: 'cascade' });
 Conversation.belongsTo(User, { onDelete: 'cascade' });
 
-
-
 User.sync().then(() => {
-  Message.sync().then(() => {
-    Conversation.sync();
+  Conversation.sync().then(() => {
+    Message.sync();
   });
 });
 

@@ -3,3 +3,4 @@ node_modules
 /client/static/bundle.js
 package-lock.json
 localhost.pem
+.env
