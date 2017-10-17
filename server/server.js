@@ -5,6 +5,7 @@ const socketIo = require('socket.io');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
+require('dotenv').config();
 // import files
 const router = require('./router/router.js');
 const db = require('../DB/db.js');
@@ -14,7 +15,7 @@ const server = http.createServer(app);
 const io = socketIo(server);
 const port = process.env.PORT || 3000;
 // middleware
-// app.use(cors());
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/api', router);
