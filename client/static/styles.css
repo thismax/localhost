@@ -1,17 +1,12 @@
 /*
-* navbar
+NavBar
 */
-/**
- * The geosuggest module
- * NOTE: duplicated font-sizes' are for browsers which don't support rem (only IE 8)
- */
 
 .card {
   margin: 0 auto;
   float: none;
   margin-bottom: 10px;
   margin-top: 40px;
-  /* border: 0px!important; */
 }
 
 #profile-background {
@@ -26,11 +21,6 @@
 .card-text {
   padding-left: 9px;
 }
-
-/* .list-group-item {
-  border: 0px!important;
-} */
-
 
 #convostub {
   width: 40%;
@@ -63,7 +53,6 @@
  width: 350px;
  margin: auto;
 }
-
 
 .card-img-top {
   height: 553px;
@@ -112,10 +101,8 @@
   padding-right: 13px;		
 }
 
-
-
 /*
-* list of locals page
+Local Listings
 */
 
 .profile-pic {		
@@ -146,12 +133,10 @@
   margin: auto;
 }
 
-
 /* 
-* splash page
+Splash Page
 */
 
-/* padding-top: 64px; if using fixed-top navbar */
 .splash-page-container {
   background-image: url("https://hello.travefy.com/wp-content/uploads/2015/01/group-travel-family-trip-planner-app-HR.jpg");
   background-size: cover;
@@ -201,7 +186,6 @@
   margin-top: -50px;
 }
 
-/* might cause issues? */
 .card {
   border: 0px !important;
 }
@@ -214,11 +198,8 @@
   font-size: 14px;
 }
 
-
-
 /*
-* geosuggest
-* NOTE: duplicated font-sizes' are for browsers which don't support rem (only IE 8)
+Geosuggest
 */
 
 .geosuggest {
@@ -229,6 +210,7 @@
   margin: 1em auto;
   text-align: left;
 }
+
 .geosuggest__input {
   width: 100%;
   border: 2px solid transparent;
@@ -238,10 +220,12 @@
   -webkit-transition: border 0.2s, box-shadow 0.2s;
           transition: border 0.2s, box-shadow 0.2s;
 }
+
 .geosuggest__input:focus {
   border-color: #267dc0;
   box-shadow: 0 0 0 transparent;
 }
+
 .geosuggest__suggests {
   position: absolute;
   top: 100%;
@@ -260,6 +244,7 @@
   -webkit-transition: max-height 0.2s, border 0.2s;
           transition: max-height 0.2s, border 0.2s;
 }
+
 .geosuggest__suggests--hidden {
   max-height: 0;
   overflow: hidden;
@@ -272,30 +257,29 @@
   padding: .5em .65em;
   cursor: pointer;
 }
+
 .geosuggest__item:hover,
 .geosuggest__item:focus {
   background: #f5f5f5;
 }
+
 .geosuggest__item--active {
   background: #267dc0;
   color: #fff;
 }
+
 .geosuggest__item--active:hover,
 .geosuggest__item--active:focus {
   background: #ccc;
 }
+
 .geosuggest__item__matched-text {
   font-weight: bold;
-}
-
-#bio-input {
-
 }
 
 .form-span {
   width: 25%
 }
-
 
 #signup-background {
   background: transparent;
@@ -324,7 +308,6 @@
   background-color: rgba(0, 0, 0, 0.46);
   color: white;
   border-radius: 5px;
-
 }
 
 video { 
@@ -345,24 +328,24 @@ video {
   width: 50%;
 }
 
-
 /*
-
-CHATBOX:
-
+Chat:
 */
 
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: rgba(25, 147, 147, 0.1);
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgba(25, 147, 147, 0.2);
 }
+
 .chat-thread {
   margin: 24px auto 0 auto;
   padding: 0 20px 0 0;
@@ -381,6 +364,7 @@ CHATBOX:
   border-radius: 10px;
   background-color: rgba(25, 147, 147, 0.2);
 }
+
 /* Chat - Avatar */
 .chat-thread li:before {
   position: absolute;
@@ -390,6 +374,7 @@ CHATBOX:
   border-radius: 50px;
   content: '';
 }
+
 /* Chat - Speech Bubble Arrow */
 .chat-thread li:after {
   position: absolute;
@@ -399,6 +384,7 @@ CHATBOX:
   height: 0;
   border-top: 15px solid rgba(25, 147, 147, 0.2);
 }
+
 .chat-thread .sender {
   animation: show-chat-odd 0.15s 1 ease-in;
   -moz-animation: show-chat-odd 0.15s 1 ease-in;
@@ -407,9 +393,11 @@ CHATBOX:
   margin-right: 80px;
   color: #0ad5c1;
 }
+
 .chat-thread .sender:before {
   right: -80px;
 }
+
 .chat-thread .sender:after {
   border-right: 15px solid transparent;
   right: -15px;
@@ -441,7 +429,6 @@ CHATBOX:
   height: 0px;
 }
 
-
 .chat-thread .recipient {
   animation: show-chat-even 0.15s 1 ease-in;
   -moz-animation: show-chat-even 0.15s 1 ease-in;
@@ -450,17 +437,21 @@ CHATBOX:
   margin-left: 80px;
   color: #0ec879;
 }
+
 .chat-thread .recipient:before {
   left: -80px;
 }
+
 .chat-thread .recipient:after {
   border-left: 15px solid transparent;
   left: -15px;
 }
+
 .chat-window {
   position: fixed;
   bottom: 18px;
 }
+
 .chat-window-message {
   width: 100%;
   height: 48px;
@@ -471,6 +462,7 @@ CHATBOX:
   border-bottom: 1px solid rgba(25, 147, 147, 0.2);
   outline: none;
 }
+
 /* Small screens */
 @media all and (max-width: 767px) {
   .chat-thread {
@@ -482,6 +474,7 @@ CHATBOX:
     width: 90%;
   }
 }
+
 /* Medium and large screens */
 @media all and (min-width: 768px) {
   .chat-thread {
@@ -493,6 +486,7 @@ CHATBOX:
     width: 50%;
   }
 }
+
 @keyframes show-chat-even {
   0% {
     margin-left: -480px;
@@ -501,6 +495,7 @@ CHATBOX:
     margin-left: 0;
   }
 }
+
 @-moz-keyframes show-chat-even {
   0% {
     margin-left: -480px;
@@ -509,6 +504,7 @@ CHATBOX:
     margin-left: 0;
   }
 }
+
 @-webkit-keyframes show-chat-even {
   0% {
     margin-left: -480px;
@@ -517,6 +513,7 @@ CHATBOX:
     margin-left: 0;
   }
 }
+
 @keyframes show-chat-odd {
   0% {
     margin-right: -480px;
@@ -525,6 +522,7 @@ CHATBOX:
     margin-right: 0;
   }
 }
+
 @-moz-keyframes show-chat-odd {
   0% {
     margin-right: -480px;
@@ -533,6 +531,7 @@ CHATBOX:
     margin-right: 0;
   }
 }
+
 @-webkit-keyframes show-chat-odd {
   0% {
     margin-right: -480px;
