@@ -6,7 +6,6 @@ const Messages = ({messages, currentUser, currentUserImage, otherUserImageUrl, c
     <div>
       {messages.map((message) => {
         return (
-          
           <Message
             message={message}
             key={message.id}
@@ -18,7 +17,7 @@ const Messages = ({messages, currentUser, currentUserImage, otherUserImageUrl, c
         ) 
       })}
     </div>
-  )
+  );
 };
 
 export default Messages;

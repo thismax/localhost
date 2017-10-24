@@ -38,7 +38,7 @@ class ConvoStub extends Component {
 					this.fetchOtherUserImage();
 				});
 			}
-		})
+		}).catch(err => console.error(err));
 	}
 
 	fetchOtherUserImage() {
@@ -105,7 +105,7 @@ class ConvoStub extends Component {
           <button className="btn btn-primary delete-conversation-button" onClick={this.deleteConversation}>Delete this conversation</button>
 			  </div>
 			</div>
-		)
+		);
 	}
 }
 

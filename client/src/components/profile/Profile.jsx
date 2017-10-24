@@ -37,7 +37,7 @@ class Profile extends Component {
 
   handleBioInput(e) {
     this.setState({
-      bioInput: e.target.value 
+      bioInput: e.target.value;
     });
   }
 
@@ -118,9 +118,8 @@ class Profile extends Component {
       </div>
       </div>
       </div>
-    )
+    );
   };
-  
 };
 
 export default Profile;

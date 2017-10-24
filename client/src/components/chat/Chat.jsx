@@ -21,7 +21,7 @@ class Chat extends Component {
     if (this.props.messages[0] === undefined) {
       this.setState({ convoIdToPass: 0 });
     } else {
-      this.setState({ convoIdToPass: this.props.messages[0].conversationId})
+      this.setState({ convoIdToPass: this.props.messages[0].conversationId});
     }
   }
   
@@ -59,8 +59,8 @@ class Chat extends Component {
         id: this.state.messages[this.state.messages.length-1].id+1,
       }
       this.props.passChatMessages.call(null, message);
-      this.setState({messages: [...this.state.messages, message]})
-      this.socket.emit('message', message)
+      this.setState({messages: [...this.state.messages, message]});
+      this.socket.emit('message', message);
       event.target.value = '';
     }
   }
@@ -77,9 +77,6 @@ class Chat extends Component {
           conversationId={this.state.convoIdToPass}
         />
         </ul>
-          {/* <form className="chat-window">
-            <input className="chat-window-message" type="text" placeholder='Enter a message...' onKeyUp={this.handleSubmit.bind(this)}/>
-         </form> */}
          <div>
          <div className="geosuggest">
           <div className="geosuggest__input-wrapper">

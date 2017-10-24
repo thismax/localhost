@@ -345,11 +345,9 @@ module.exports.addRatingToUser = (req, res) => {
     .then((profile) => {
       profile.update({
         rating: newRating,
-      })
-      .then((user) => {
+      }).then((user) => {
         res.status(201).json(user);
-      })
-      .catch((err) => {
+      }).catch((err) => {
         res.status(404).json(err);
       });
     });
