@@ -49,6 +49,7 @@
     "nodemon": "^1.12.1",
     "nyc": "^6.4.4",
     "path": "^0.12.7",
+    "pg": "^7.4.0",
     "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-addons-shallow-compare": "^15.5.2",
@@ -76,7 +77,6 @@
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "compression-webpack-plugin": "^1.0.1",
-    "eslint": "^3.19.0",
-    "pg": "^7.4.0"
+    "eslint": "^3.19.0"
   }
 }
