@@ -1,11 +1,7 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 //this initializes the database.
-const DB = new Sequelize(process.env.NAME, process.env.USERNAME, process.env.PASSWORD, {
-  host: process.env.HOST,
-  port: process.env.RDS_PORT,
-  dialect: 'postgres',
-});
+const DB = new Sequelize(process.env.DB_URL);
 
 //This initializes and authenticates the database
 DB.authenticate()

@@ -21,6 +21,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/api', router);
 app.use('/', express.static(__dirname + '/../client/static'));
 
+app.get('*.js', (req, res, next) => {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
+
 // socket.io chat
 io.on('connection', (socket) => {
   socket.on('message', (message) => {

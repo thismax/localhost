@@ -1,5 +1,6 @@
 const path = require('path');
-
+const webpack = require('webpack');
+const CompressionPlugin = require('compression-webpack-plugin');
 const webpackConfig = {
   entry: path.resolve(__dirname, './client/src/index.jsx'),
   output: {
@@ -17,6 +18,40 @@ const webpackConfig = {
       historyApiFallback: true
   },
   devtool: 'inline-source-map',
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        screw_ie8: true,
+        conditionals: true,
+        unused: true,
+        comparisons: true,
+        sequences: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true
+      },
+      output: {
+        comments: false
+      }
+    }), 
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
+  ]
 };
 
 webpackConfig.module.loaders.push({
